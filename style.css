@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+*{
+    margin:0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2? family= Bebas+Neue & display=swap');
+
+
+/*  
+    >>> o comando font-face e usado pra importa fontes baixadas do pc <<<
+
+@font-face {
+font-family: 'android'; 
+src: url('idroid.otf') format('opentype');
+font-weight: normal;
+}
+*/
+
+:root{                       /* o comando root pode ser criada varias variaves de cores e estilos de fonte*/ 
+    --cor01:#033E8C;            
+    --cor02:#03588C;
+    --cor03:#025959;
+    --cor04:#034001;
+    --cor05:#260101;
+
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;      /* variavel com estilo de fontes busquei em >> https://fonts.google.com/ */
+    /* --font-android: 'Android', cursive; */
+}
+
+
+body{
+    background-color: gray;
+}
+header h1, p{
+    text-align: center;
+    font-weight: bold;
+    color: aliceblue;
+    
+}
+header{
+    padding: 40px;
+    background: linear-gradient(to bottom, var(--cor02), var(--cor03));
+}
+nav{
+    background: #025959;
+}
+nav > a{
+    text-decoration:none;
+    padding: 0px 7px 0px;
+    color: aliceblue;
+}
+nav > a:hover{
+    text-decoration:none;
+    padding: 0px 7px 0px;
+    background-color: rgb(0, 211, 28);
+    border-radius: 50px;
+    transition: 0.4s;
+}
+main{
+    margin: auto;
+    background-color: rgb(44, 44, 44);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    max-width: 1000px;
+    min-width: 300px;
+}
+
+.video{
+    background-color: #025959;
+    margin:0px -10px 30px -10px;           /* comando pra centralizar qualquer iframe no site */
+    padding: 20px;
+    padding-bottom: 55.3%;
+    position: relative;
+}
+.video iframe{
+    position: absolute;
+    left:5%;                              /* comando pra centralizar qualquer iframe no site */
+    top:5%;
+    width: 90%;
+    height: 90%;
+}
+h1, h2, h3{
+    text-align: center;
+    margin: 10px;
+    color:rgb(187, 190, 7);
+    font-family: var(--fonte-destaque);
+}
+main p{
+    margin: 10px;
+    line-height: 1.5em;
+    text-indent: 30px;
+    text-align: justify;
+}
+img{
+    width: 100%;
+   
+}
+ul{
+    list-style-position: inside;            /* Exemplo: inside e dentro da DIV e outside e fora da div */
+    list-style-type: '\2714\00A0\00A0';     /* comando \00A0 pra da espaço entre o link e a imagem \1f517 o codigo da imagem
+                                            fonte de onde peguei >>> https://emojipedia.org/  */
+    columns:2;
+   
+}
+.link{
+    color: rgb(209, 224, 0);
+    text-decoration: none;
+}
+.link::after{ 
+    content: '\00A0\1f517';  /* comando \00A0 pra da espaço entre o link e a imagem \1f517 o codigo da imagem
+                            fonte de onde peguei >>> https://emojipedia.org/  */
+ }
+.link:hover{
+    color: rgb(205, 0, 224);
+    text-decoration: underline;
+}
+
+
